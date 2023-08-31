@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Reflection;
 using Whole_Lecture.Models;
 
 namespace Whole_Lecture.Controllers
@@ -60,11 +61,63 @@ namespace Whole_Lecture.Controllers
             ViewBag.gender = gender;
             ViewBag.email = email;
             ViewBag.message = comment;
-            ViewBag.tar = "#exampleModal";
-            ViewBag.tog = "modal";
+            ViewBag.value = "container-fluid d-grid bg-danger";
+          
             return View();
         
         
+        }
+        [HttpGet]
+        public IActionResult FU_Action()
+        {
+            return View();        
+        }
+        [HttpPost]
+        public IActionResult FU_Action(IFormFile image)
+        {
+          
+            try
+            {
+                if (image.Length>0)
+                {
+                    string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Files");
+                    string fileNameWithPath = Path.Combine(path, image.FileName);
+                    //create folder if not exist
+                    if (!Directory.Exists(path))
+                    
+                        Directory.CreateDirectory(path);
+               
+                    //if (File.Exists(image.FileName))
+                    //{
+                    //    using (var stream = new FileStream(fileNameWithPath, FileMode.Create))
+                    //    {
+
+                    //        image.CopyTo(stream);
+                    //    }
+                    //}
+                    //else
+                    //{
+                        
+                    //}
+                   
+                    ViewBag.IsSuccess = true;
+                    ViewBag.Message = "Files upload successfully";
+                }
+                else
+                {
+                    ViewBag.IsSuccess = false;
+                    ViewBag.Message = "Please select files";
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Message = ex.Message;
+            }
+          
+
+            return View();
         }
     }
 }

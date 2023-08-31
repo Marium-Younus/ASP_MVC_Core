@@ -3,36 +3,7 @@
 *@
 <form asp-action="FD_Action" asp-controller="Home">
 
-    @{
-        if (@ViewBag.fullname != null)
-        {
-            <!-- Modal -->
-            <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Form Data</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p>@ViewBag.fullname</p>
-                            <p>@ViewBag.password</p>
-                            <p>@ViewBag.gender</p>
-                            <p>@ViewBag.email</p>
-                            <p>@ViewBag.message</p>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        }
-
-    }
-
+   
 
 
 <div class="text-center">
@@ -50,11 +21,10 @@
         <label for="floatingPassword">Password</label>
     </div>
     <div class="form-check mb-3">
-        <input type="radio" name="gender"><span> Male</span>
+        <input type="radio" name="gender" value="Male"><span> Male</span>
     </div>
     <div class="form-check mb-3">
-        <input  type="radio" name="gender">
-        <span> Female</span>
+        <input  type="radio" name="gender" value="Female"> <span> Female</span>
     </div>
     <div class="form-floating mb-3">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
@@ -66,9 +36,16 @@
         <label for="floatingInput">Comment</label>
     </div>
     <div class="d-grid mb-3">
-            <input type="submit" value="Submit" class="btn btn-dark" data-bs-toggle="@ViewBag.tog" data-bs-target="@ViewBag.tar" />
+            <input type="submit" value="Submit" class="btn btn-dark"  />
     </div>
 </div>
-  
+    <div class="@ViewBag.value">
+        <p>@ViewBag.fullname</p>
+        <p>@ViewBag.password</p>
+        <p>@ViewBag.gender</p>
+        <p>@ViewBag.email</p>
+        <p>@ViewBag.message</p>
+  </div>
 
 </form>
+
