@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Reflection;
 using Whole_Lecture.Models;
+using System.IO;
 
 namespace Whole_Lecture.Controllers
 {
@@ -86,27 +87,29 @@ namespace Whole_Lecture.Controllers
                     if (!Directory.Exists(path))
                     
                         Directory.CreateDirectory(path);
-               
-                    //if (File.Exists(image.FileName))
-                    //{
-                    //    using (var stream = new FileStream(fileNameWithPath, FileMode.Create))
-                    //    {
 
-                    //        image.CopyTo(stream);
-                    //    }
-                    //}
-                    //else
-                    //{
-                        
-                    //}
-                   
-                    ViewBag.IsSuccess = true;
-                    ViewBag.Message = "Files upload successfully";
+                    if (!(System.IO.File.Exists(fileNameWithPath)))
+                    {
+                        using (var stream = new FileStream(fileNameWithPath, FileMode.Create))
+                        {
+
+                            image.CopyTo(stream);
+                            ViewBag.color = "text-success";
+                            ViewBag.Message = "File upload successfully";
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.color = "text-primary";
+                        ViewBag.Message = "File Already Exist";
+                    }
+
+                  
                 }
                 else
                 {
-                    ViewBag.IsSuccess = false;
-                    ViewBag.Message = "Please select files";
+                    ViewBag.color = "text-danger";
+                    ViewBag.Message = "Please select file";
                 }
 
             }

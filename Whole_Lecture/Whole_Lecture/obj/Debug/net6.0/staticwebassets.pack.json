@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Whole_Lecture.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\addidas.jpg",
+      "PackagePath": "staticwebassets\\Files\\addidas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\laptop.jpg",
+      "PackagePath": "staticwebassets\\Files\\laptop.jpg"
+    },
+    {
       "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\rolex.jpg",
       "PackagePath": "staticwebassets\\Files\\rolex.jpg"
     },

@@ -1,0 +1,36 @@
+﻿    
+    @model Types_Of_Views.Models.LoginModel
+    @{
+        ViewData["Title"] = "Privacy Policy";
+    }
+    <form asp-action="STV" asp-controller="Home">
+       <div class="text-center">
+            <h1 class="display-4">Login</h1>
+            <div class="form-floating mb-3">
+                @Html.TextBoxFor(x=>x.Username,new{ @class= "form-control",placeholder="Username" })
+                <label for="floatingInput">UserName</label>
+            </div>
+       
+            <div class="form-floating mb-3">
+                @Html.PasswordFor(x=>x.Password,new{ @class= "form-control",placeholder="Password" })
+                <label for="floatingPassword">Password</label>
+            </div>
+       
+            <div class="d-grid mb-3">
+                <input type="submit" value="Submit" class="btn btn-dark"/>
+            </div>
+            <div class="@ViewBag.bs_class" role="alert">
+                <h4 class="text-center">@ViewBag.message</h4>
+        </div>
+        <div class="d-grid mb-3">
+            <img src="~/images/spv.png" />
+        </div>
+       
+    </div>  
+    </form>
+
+
+
+
+
+

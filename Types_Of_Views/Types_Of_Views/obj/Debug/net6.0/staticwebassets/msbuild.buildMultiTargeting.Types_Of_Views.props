@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Types_Of_Views.props" />
+</Project>
