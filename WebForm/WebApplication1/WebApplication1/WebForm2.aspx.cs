@@ -40,6 +40,7 @@ namespace WebApplication1
             {
                 message += CheckBox3.Text;
             }
+           
             
             result.InnerText = user.Text + " " + email.Text + " " + gender +" " + date.Text+" "+message;
         }
