@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Reflection;
 using Whole_Lecture.Models;
 using System.IO;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Whole_Lecture.Controllers
 {
@@ -123,5 +124,67 @@ namespace Whole_Lecture.Controllers
 
             return View();
         }
+
+        public IActionResult MFU_Action()
+        {
+
+            return View();
+
+
+        }
+        [HttpPost]
+        public IActionResult MFU_Action(List<IFormFile> files)
+        {
+
+            try
+            {
+                foreach (var item in files)
+                {
+                if (item.Length > 0)
+                {
+                    string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Files");
+                    string fileNameWithPath = Path.Combine(path, item.FileName);
+                    //create folder if not exist
+                    if (!Directory.Exists(path))
+
+                        Directory.CreateDirectory(path);
+
+                    if (!(System.IO.File.Exists(fileNameWithPath)))
+                    {
+                        using (var stream = new FileStream(fileNameWithPath, FileMode.Create))
+                        {
+
+                            item.CopyTo(stream);
+                            ViewBag.color = "text-success";
+                            ViewBag.Message = "File upload successfully";
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.color = "text-primary";
+                        ViewBag.Message = "File Already Exist";
+                    }
+
+
+                }
+                else
+                {
+                    ViewBag.color = "text-danger";
+                    ViewBag.Message = "Please select file";
+                }
+                }
+                
+
+            }
+            catch (Exception ex)
+            {
+
+                ViewBag.Message = ex.Message;
+            }
+
+
+            return View();
+        }
+
     }
 }
