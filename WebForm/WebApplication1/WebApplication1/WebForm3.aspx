@@ -19,13 +19,11 @@
                  </div>
                 <div class="col-md-12 mt-3 d-grid">
                  <asp:Button runat="server" ID="btn_upload" OnClick="btn_upload_Click" Text="Upload" CssClass="btn btn-primary "  />
-                </div>
-
-                 
-            </div><div class="mt-4 p-5 bg-info text-white rounded">
-                  <h5 id="msg" runat="server"></h5>
-                 
-                </div>
+                </div>               
+            </div>
+             <div class="mt-4 p-5 bg-info text-white rounded">
+                  <h5 id="msg" runat="server"></h5>    
+             </div>
          </div>
     </form>
 </body>

@@ -55,12 +55,13 @@ namespace Whole_Lecture.Controllers
         }
         [HttpPost]
         
-        public IActionResult FD_Action(string fname, string lname,string pwd,string email,string comment,string gender)
+        public IActionResult FD_Action(string fname, string lname,string pwd,string email,string country,string comment,string gender)
         {
             ViewBag.fullname = fname + " " + lname;
             ViewBag.password = pwd;
             ViewBag.gender = gender;
             ViewBag.email = email;
+            ViewBag.country = country;
             ViewBag.message = comment;
             ViewBag.value = "container-fluid d-grid bg-danger";
           
