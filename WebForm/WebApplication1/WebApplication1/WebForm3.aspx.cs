@@ -24,15 +24,16 @@ namespace WebApplication1
                     msg.InnerHtml = "The file has been uploaded<br />yahooo";
                 
                     
+                  
                 }
                 catch (Exception ex)
                 {
-                    msg.InnerText = "Error: " + ex.Message;
+                    msg.InnerHtml = "Error: " + ex.Message;
                 }
             }
             else
             {
-                msg.InnerText = "Please select a file to upload.";
+                msg.InnerHtml = "Please select a file to upload.";
             }
         }
     }

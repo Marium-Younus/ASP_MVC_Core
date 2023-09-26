@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/ey77Rvtzkbf5uLE5Q6StefnhpzuHvfoIc0bp2dxim4=",
+  "Hash": "Ky8hqP7Y+X4fyznxRtu3Jr9AJZiPCwZmcY9PBJQRlsM=",
   "Source": "Whole_Lecture",
   "BasePath": "_content/Whole_Lecture",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\addidas.jpg",
+      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user1.png",
       "SourceId": "Whole_Lecture",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\",
       "BasePath": "_content/Whole_Lecture",
-      "RelativePath": "Files/addidas.jpg",
+      "RelativePath": "Files/user1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\addidas.jpg"
+      "OriginalItemSpec": "wwwroot\\Files\\user1.png"
     },
     {
-      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\laptop.jpg",
+      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user2.png",
       "SourceId": "Whole_Lecture",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\",
       "BasePath": "_content/Whole_Lecture",
-      "RelativePath": "Files/laptop.jpg",
+      "RelativePath": "Files/user2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\laptop.jpg"
+      "OriginalItemSpec": "wwwroot\\Files\\user2.png"
     },
     {
-      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\rolex.jpg",
+      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user3.png",
       "SourceId": "Whole_Lecture",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\",
       "BasePath": "_content/Whole_Lecture",
-      "RelativePath": "Files/rolex.jpg",
+      "RelativePath": "Files/user3.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\rolex.jpg"
+      "OriginalItemSpec": "wwwroot\\Files\\user3.png"
+    },
+    {
+      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user4.png",
+      "SourceId": "Whole_Lecture",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\",
+      "BasePath": "_content/Whole_Lecture",
+      "RelativePath": "Files/user4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\user4.png"
+    },
+    {
+      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user5.png",
+      "SourceId": "Whole_Lecture",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\",
+      "BasePath": "_content/Whole_Lecture",
+      "RelativePath": "Files/user5.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\user5.png"
     },
     {
       "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\js\\site.js",

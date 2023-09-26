@@ -15,7 +15,10 @@ namespace Whole_Lecture.Controllers
         {
             _logger = logger;
         }
-
+        public IActionResult Raz_Action()
+        {
+            return View();
+        }
         public IActionResult VB_Action()
         {
             ViewBag.intro = "Introduction to Viewbag";
@@ -79,7 +82,7 @@ namespace Whole_Lecture.Controllers
         public IActionResult FU_Action(IFormFile image)
         {
           
-            try
+            try 
             {
                 if (image.Length>0)
                 {

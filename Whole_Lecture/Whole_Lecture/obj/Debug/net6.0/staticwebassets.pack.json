@@ -5,16 +5,24 @@
       "PackagePath": "staticwebassets\\Whole_Lecture.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\addidas.jpg",
-      "PackagePath": "staticwebassets\\Files\\addidas.jpg"
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user1.png",
+      "PackagePath": "staticwebassets\\Files\\user1.png"
     },
     {
-      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\laptop.jpg",
-      "PackagePath": "staticwebassets\\Files\\laptop.jpg"
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user2.png",
+      "PackagePath": "staticwebassets\\Files\\user2.png"
     },
     {
-      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\rolex.jpg",
-      "PackagePath": "staticwebassets\\Files\\rolex.jpg"
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user3.png",
+      "PackagePath": "staticwebassets\\Files\\user3.png"
+    },
+    {
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user4.png",
+      "PackagePath": "staticwebassets\\Files\\user4.png"
+    },
+    {
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\Files\\user5.png",
+      "PackagePath": "staticwebassets\\Files\\user5.png"
     },
     {
       "Id": "C:\\Users\\mariumyounus\\source\\repos\\Whole_Lecture\\Whole_Lecture\\wwwroot\\css\\site.css",
