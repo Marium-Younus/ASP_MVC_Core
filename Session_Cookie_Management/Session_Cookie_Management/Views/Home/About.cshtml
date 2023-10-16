@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor accessor
+
+
+
+<h1>@ViewData["Title"]</h1>
+
+<p>@ViewBag.Email </p>
+<h1>Diection Session Access in View</h1>
+<p>@accessor.HttpContext.Session.GetString("email_session")</p>

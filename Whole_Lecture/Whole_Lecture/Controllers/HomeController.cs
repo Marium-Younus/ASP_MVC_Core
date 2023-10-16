@@ -68,10 +68,7 @@ namespace Whole_Lecture.Controllers
             ViewBag.country = country;
             ViewBag.message = comment;
             ViewBag.value = "container-fluid d-grid bg-danger";
-          
-            return View();
-        
-        
+            return View();  
         }
         [HttpGet]
         public IActionResult FU_Action()

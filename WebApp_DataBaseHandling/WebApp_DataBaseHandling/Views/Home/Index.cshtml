@@ -1,0 +1,51 @@
+﻿@model WebApp_DataBaseHandling.Models.CategoryTbl
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Add Category</h1>
+   <form asp-action="Index" asp-controller="Home">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Category Name" asp-for="CatName">
+            <label for="floatingInput">Category Name</label>
+            <span asp-validation-for="CatName" class="text-danger"></span>
+        </div>
+        <div class="form-floating">
+            <input type="submit" class="btn btn-success" value="Add Category">
+          
+        </div>
+        <div class="@ViewBag.value" role="alert">
+            @ViewBag.msg
+        </div>
+     
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Category Name</th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @ViewBag.data)
+                {
+                     <tr>
+                        <th scope="row">@item.CatId</th>
+                        <td>@item.CatName</td>
+                       
+                </tr>
+                }
+               
+               
+            </tbody>
+        </table>
+
+
+
+   </form>
+</div>
