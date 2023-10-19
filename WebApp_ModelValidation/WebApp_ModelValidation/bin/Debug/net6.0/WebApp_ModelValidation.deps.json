@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "WebApp_ModelValidation/1.0.0": {
+        "runtime": {
+          "WebApp_ModelValidation.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WebApp_ModelValidation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

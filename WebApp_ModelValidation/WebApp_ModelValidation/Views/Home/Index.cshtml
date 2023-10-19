@@ -1,0 +1,73 @@
+﻿@model WebApp_ModelValidation.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-action="Index" asp-controller="Home">
+   
+<div>
+        <h1 class="display-4">Welcome</h1><div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-floating mb-3">
+        <input asp-for="User_Name" type="text" class="form-control" placeholder="name@example.com">
+        <label for="floatingInput">Username</label>
+            <span asp-validation-for="User_Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+            <input asp-for="User_Email" type="text" class="form-control" placeholder="name@example.com">
+            <label for="floatingInput">Email</label>
+            <span asp-validation-for="User_Email" class="text-danger"></span>
+    </div>
+
+
+        <div class="form-floating  mb-3">
+            <input asp-for="User_Password"  type="password" class="form-control" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+            <span asp-validation-for="User_Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating  mb-3">
+            <input asp-for="User_CPassword" type="password" class="form-control" placeholder="Password">
+            <label for="floatingPassword">Confirm Password</label>
+            <span asp-validation-for="User_CPassword" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating  mb-3">
+            <input asp-for="User_Age" type="text"  class="form-control" placeholder="Age">
+            <label for="floatingPassword">Age</label>
+            <span asp-validation-for="User_Age" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12 mb-3">
+           <select class="form-select" asp-for="User_Qualification">
+                <option value="">Select Any Qualification</option>
+                <option value="B.E">B.E</option>
+                <option value="BSC">BSC</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Com">B.Com</option>
+                <option value="MBBS">MBBS</option>
+           </select>
+            <span asp-validation-for="User_Qualification" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating  mb-3">
+            <input asp-for="User_Phone" type="text" class="form-control" placeholder="Phone">
+            <label for="floatingPhone">Phone</label>
+            <span asp-validation-for="User_Phone" class="text-danger"></span>
+        </div>
+
+        <div class="form-floating  mb-3">
+            <input asp-for="WebsiteURL" type="text" class="form-control" placeholder="Website URL">
+            <label for="floatingPhone">Website URL</label>
+            <span asp-validation-for="WebsiteURL" class="text-danger"></span>
+        </div>
+        <div class="form-floating d-grid  mb-3">
+            <input type="submit" class="btn btn-lg btn-success" d>
+        </div>
+
+        <div class="@ViewBag.value" role="alert">
+           @ViewBag.msg
+        </div>
+
+      
+</div>
+</form>

@@ -1120,11 +1120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mariumyounus\\source\\repos\\WebForm\\Session_Cookie_Management\\Session_Cookie_Management\\Session_Cookie_Management.csproj",
+      "projectUniqueName": "C:\\Users\\mariumyounus\\source\\repos\\Session_Cookie_Management\\Session_Cookie_Management\\Session_Cookie_Management.csproj",
       "projectName": "Session_Cookie_Management",
-      "projectPath": "C:\\Users\\mariumyounus\\source\\repos\\WebForm\\Session_Cookie_Management\\Session_Cookie_Management\\Session_Cookie_Management.csproj",
+      "projectPath": "C:\\Users\\mariumyounus\\source\\repos\\Session_Cookie_Management\\Session_Cookie_Management\\Session_Cookie_Management.csproj",
       "packagesPath": "C:\\Users\\mariumyounus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mariumyounus\\source\\repos\\WebForm\\Session_Cookie_Management\\Session_Cookie_Management\\obj\\",
+      "outputPath": "C:\\Users\\mariumyounus\\source\\repos\\Session_Cookie_Management\\Session_Cookie_Management\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
