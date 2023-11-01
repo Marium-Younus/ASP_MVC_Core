@@ -1,0 +1,51 @@
+﻿@model Database_FirstApproach.Models.Student
+
+<div class="text-center">
+   
+    <h1 class="display-4">Student Form</h1>
+    <form class="row g-3" asp-action="Add_Student" asp-controller="Home">
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">Name</label>
+    <input type="text" class="form-control" asp-for="SName"/>
+    <span asp-validation-for="SName" style="color:red"></span>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Email</label>
+     <input type="text" class="form-control" asp-for="SEmail"/>
+     <span asp-validation-for="SEmail" style="color:red"></span>
+  </div>
+  <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Phone</label>
+            <input type="text" class="form-control" asp-for="SPhone" />
+            <span asp-validation-for="SPhone" style="color:red"></span>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-control" asp-for="SCity"/>
+     <span asp-validation-for="SCity" style="color:red"></span>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">Gender</label>
+     <select class="form-select" asp-for="SGender">
+       <option value="">Choose Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+     <span asp-validation-for="SGender" style="color:red"></span>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Age</label>
+    <input type="text" class="form-control" asp-for="SAge">
+     <span asp-validation-for="SAge" style="color:red"></span>
+  </div>
+  
+  <div class="col-12 d-grid">
+            <input class="btn btn-success" type="submit" value="Add Student" />
+  </div>
+
+        <div class="@ViewBag.value" role="alert">
+            @ViewBag.msg
+        </div>
+
+    </form>
+</div>

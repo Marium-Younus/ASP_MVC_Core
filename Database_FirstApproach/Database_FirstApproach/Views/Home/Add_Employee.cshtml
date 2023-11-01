@@ -1,0 +1,30 @@
+﻿@model Database_FirstApproach.Models.Employee
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+
+    <h1 class="display-4">Student Form</h1>
+    <form class="row g-3" asp-action="Add_Employee" asp-controller="Home" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <label for="validationCustom01" class="form-label">Name</label>
+            <input type="text" class="form-control" asp-for="EName" />
+            <span asp-validation-for="EName" style="color:red"></span>
+        </div>
+        <div class="col-md-6">
+            <label for="validationCustom02" class="form-label">Email</label>
+            <input type="file" class="form-control" name="image" asp-for="EImage" />
+            <span asp-validation-for="EImage" style="color:red"></span>
+        </div>
+
+        <div class="col-12 d-grid">
+            <input class="btn btn-success" type="submit" value="Add Employee" />
+        </div>
+
+        <div class="@ViewBag.value" role="alert">
+            @ViewBag.msg
+        </div>
+
+    </form>
+</div>
