@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Database_FirstApproach.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mariumyounus\\source\\repos\\Database_FirstApproach\\Database_FirstApproach\\wwwroot\\Files\\laptop.png",
+      "PackagePath": "staticwebassets\\Files\\laptop.png"
+    },
+    {
       "Id": "C:\\Users\\mariumyounus\\source\\repos\\Database_FirstApproach\\Database_FirstApproach\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

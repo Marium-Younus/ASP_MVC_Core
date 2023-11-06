@@ -124,5 +124,11 @@ namespace Database_FirstApproach.Controllers
 
                 return View();
         }
+
+        public IActionResult Show_Employee()
+        {
+            ViewBag.employee = context.Employees.ToList();
+            return View();
+        }
     }
 }

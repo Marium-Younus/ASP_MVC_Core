@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cLUa8M10XGGFm+kgGoLTy6TCmLGdwDPNhuWAYX0Gyvk=",
+  "Hash": "KioM3Nlj4XoflXGkFsq8atD+Xz/rRRJYpWZh0jcK/9c=",
   "Source": "Database_FirstApproach",
   "BasePath": "_content/Database_FirstApproach",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Database_FirstApproach\\Database_FirstApproach\\wwwroot\\Files\\laptop.png",
+      "SourceId": "Database_FirstApproach",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariumyounus\\source\\repos\\Database_FirstApproach\\Database_FirstApproach\\wwwroot\\",
+      "BasePath": "_content/Database_FirstApproach",
+      "RelativePath": "Files/laptop.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Files\\laptop.png"
     },
     {
       "Identity": "C:\\Users\\mariumyounus\\source\\repos\\Database_FirstApproach\\Database_FirstApproach\\wwwroot\\js\\site.js",
