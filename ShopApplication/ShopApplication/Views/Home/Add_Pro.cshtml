@@ -1,0 +1,45 @@
+﻿@model ShopApplication.Models.Product
+<div class="text-center">
+    <form asp-controller="Home" asp-action="Add_Pro" enctype="multipart/form-data">
+     <!---------------------------------------------------------------------------------------------------->
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" asp-for="PName" placeholder="Username" >
+                <br />
+                <span asp-validation-for="PName" style="color:red"></span>
+            </div>
+     <!---------------------------------------------------------------------------------------------------->
+            <div class="input-group mb-3">
+                    <input type="text" class="form-control" asp-for="PPrice" placeholder="Price">
+                    <br />
+                    <span asp-validation-for="PPrice" style="color:red"></span>
+             </div>
+     <!---------------------------------------------------------------------------------------------------->
+            <div class="input-group mb-3">
+               <textarea class="form-control" rows="5" asp-for="PDes"></textarea>
+                <br />
+                <span asp-validation-for="PDes" style="color:red"></span>
+            </div>
+     <!---------------------------------------------------------------------------------------------------->
+            <div class="input-group mb-3">
+                <input type="file" name="pro_img" class="form-control"  />
+                <br />
+              
+            </div>
+      <!---------------------------------------------------------------------------------------------------->
+            <div class="input-group mb-3">
+               <select class="form-select" asp-for="CIdFk">
+                   <option value="">Select Category</option>
+                    @foreach (var item in ViewBag.catdata)
+                    {
+                        <option value="@item.CId">@item.CName</option>
+                    }     
+               </select>
+            <span asp-validation-for="CIdFk" style="color:red"></span>
+            </div>
+     <!----------------------------------------------------->
+            <div class="input-group d-grid mb-3">
+                <input type="submit" value="Save Product" class="btn btn-success"/>
+       
+            </div>
+    </form>
+</div>

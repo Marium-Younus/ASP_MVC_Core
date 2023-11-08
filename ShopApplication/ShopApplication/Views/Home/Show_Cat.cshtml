@@ -1,0 +1,24 @@
+﻿
+<div class="text-center">
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in ViewBag.list_cat)
+            {
+            <tr>
+                    <td scope="row">@item.CId</td>
+                    <td>@item.CName</td>
+                </tr>
+            }
+       
+        
+       
+    </tbody>
+</table>
+</div>

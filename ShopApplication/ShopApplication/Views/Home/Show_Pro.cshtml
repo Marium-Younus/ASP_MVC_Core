@@ -1,0 +1,50 @@
+﻿<div class="text-center">
+    @*<table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th scope="col">Category</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.list_pro)
+            {
+                <tr>
+                    <td scope="row">@item.PId</td>
+                    <td>@item.PName</td>
+                    <td>@item.PPrice</td>
+                    <td>@item.PDes</td>
+                    <td><img src="~/images/@item.PImage" alt="product image" width="50" height="50" /> </td>
+                    <td>@item.CName</td>
+                </tr>
+            }
+
+
+
+        </tbody>
+    </table>*@
+
+    <div class="row">
+          @foreach (var item in ViewBag.list_pro)
+            {
+        <div class="col-md-4">
+            <div class="card">
+                    <img src="~/images/@item.PImage" class="card-img-top" alt="...">
+                <div class="card-body">
+                        <h5 class="card-title">@item.PName</h5>
+                        <p class="card-text">@item.PDes</p>
+                        <p class="card-text">@item.PPrice</p>
+                        <p class="card-text">@item.CName</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+        }
+
+    </div>
+</div>
