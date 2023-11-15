@@ -1,0 +1,85 @@
+﻿
+<form>
+    @{var total = 0;}
+    <div class="row">
+        <div class="col-md-9">
+    <table class="table table-borderless">
+    <thead>
+        <tr class="bg-dark text-light text-center">
+            @* <th>Id</th> *@
+             <th>Image</th>
+            <th>Name</th>
+            <th>Quality</th>
+            <th>Price</th>
+           
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+     @foreach (var item in ViewBag.c)
+    {
+       
+        <tr class="text-center">
+       @*  <td>@item.Id</td> *@
+         @foreach (var itempro in ViewBag.pro)
+          { 
+           
+                    if (itempro.Proid == item.Id)
+                    {
+                        var amount = @item.Quantity * Convert.ToInt32(itempro.Proprice); 
+                        <td class="invert-image"><img src="~/images/@itempro.Proimage"  class="img-thumbnail" width="120" height="100"></td>
+                        <td class="invert">@itempro.Proname</td>
+                        <td class="invert">
+                            <div class="quantity">
+                                <div class="quantity-select">
+                                    <div class="entry value"><span>@item.Quantity</span></div>
+                                </div>
+                            </div>
+                        </td>
+
+                                    <td class="invert">$ @amount.ToString("#,##0.00")</td>
+                        total += Convert.ToInt32(amount);
+                       
+                        <td><a class="text-danger" asp-action="RemoveFromCart" asp-controller="Home" asp-route-productId="@itempro.Proid">Remove</a></td>
+                        }
+          }
+
+        </tr>
+        }
+        
+   </tbody>
+</table>
+    
+@if (total == 0)
+{
+    <h1 class="text-danger text-center">Your Cart is Empty</h1>
+}
+<a asp-controller="Home" asp-action="Shop" class="btn btn-dark">Continue Shopping</a>    
+    </div>
+
+    <div class="col-md-3">  
+            <div class="card">
+                <div class="card-header bg-warning">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <input type="hidden" value="@total" name="total" />
+                    <div class="float-end"><b>SubTotal</b> $ @total.ToString("#,##0.00")</div>
+                   <br /><hr />
+                    @{
+                        var saltax = (total * 6.50) / 100;
+                        var grandtotal = saltax + total;
+                    }
+                    <div class="float-end"> <b>SaleTax</b>  $ @saltax.ToString("#,##0.00")</div>
+                    <br /><hr />
+                    <div class="float-end">GrandTotal $ @grandtotal.ToString("#,##0.00")</div>
+                    <br /><hr />
+                    <div class="d-block float-end">
+                        <input type="submit" value="Checkout" class="btn  btn-success" />
+                 </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</form>

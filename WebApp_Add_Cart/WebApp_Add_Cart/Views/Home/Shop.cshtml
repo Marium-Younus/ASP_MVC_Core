@@ -1,0 +1,41 @@
+﻿<div class="text-center">
+    <div class="row">
+        <div class="col-md-2">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Shop">All Product</a>
+                </li>
+                @foreach (var item in ViewBag.Cata)
+                {
+                    
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Home" asp-action="Shop" asp-route-catid="@item.Catid">@item.Catname</a>
+                    </li>
+
+               }
+            </ul>
+        </div>
+
+        @foreach (var item in ViewBag.pro)
+       
+        {   
+           <div class="col-md-3">
+
+            <div class="card">
+                <img src="~/images/@item.Proimage" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Proname</h5>
+                    <p class="card-text">@item.Prodes</p>
+                    <p class="card-text"><b>$ @item.Proprice</b></p>
+                    <a asp-action="Singlepro" asp-controller="Home" asp-route-id="@item.Proid" class="btn btn-warning">Quick View</a>
+                </div>
+            </div>
+        </div>
+  
+
+        
+                
+            
+        }
+    </div>
+</div>

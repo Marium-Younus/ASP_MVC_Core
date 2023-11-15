@@ -1,0 +1,30 @@
+﻿
+
+
+<div class="text-center">
+<div class="card text-center">
+        @foreach (var item in ViewBag.pro)
+        {
+               <div class="card-header">
+        
+                <img src="~/images/@item.Proimage">
+
+
+    </div>
+
+    
+    <div class="card-body">
+                <h5 class="card-title text-danger">@item.Proname</h5>
+                <p class="card-text">@item.Prodes</p>
+                <p class="card-text"><b>$ @item.Proprice</b></p>
+                <form method="post" asp-action="Checkout">
+                    <!--Hidden id feild create-->
+                    <input type="hidden" name="pid" value="@item.Proid" />
+                   <b class="text-danger">Quantity: </b> <input type="number" size="2" tytal="Qty" value="1" id="qty" min="1" step="1" name="pqty" />
+                <button type="submit" class="btn btn-primary">Add to Cart</button>
+            </form>
+    </div>
+        }
+
+</div>
+</div>
