@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor accessor
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -25,6 +26,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Shop">Shop</a>
                         </li>
+                       
+                        @if(@accessor.HttpContext.Session.GetString("name_session")!= null)
+                        {
+
+                            <li class="nav-item mx-auto">
+                                <a class="nav-link text-success"> <b>@accessor.HttpContext.Session.GetString("name_session")</b></a>
+
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link btn btn-danger"  asp-controller="Home" asp-action="Logout">Logout</a>
+                            </li>
+                            
+                        }
+                        else{
+                            <li class="nav-item mx-auto">
+                                <a class="nav-link btn btn-danger"  asp-controller="Home" asp-action="CSignin">Signin</a>
+                            </li>
+                        }
+                      
                     </ul>
                 </div>
             </div>

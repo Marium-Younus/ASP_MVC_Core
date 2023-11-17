@@ -28,7 +28,6 @@ C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net
 C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\mariumyounus\source\repos\WebApp_Add_Cart\WebApp_Add_Cart\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

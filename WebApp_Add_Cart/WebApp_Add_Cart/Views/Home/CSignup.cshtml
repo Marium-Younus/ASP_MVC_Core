@@ -1,0 +1,36 @@
+﻿@model WebApp_Add_Cart.Models.Customer
+<div class="text-center">
+
+    <h1 class="display-4 text-info">Signup</h1>
+    <form asp-action="CSignup" asp-controller="Home">
+
+        <div class="form-floating mb-3">
+            <input type="text" asp-for="CustName" class="form-control" id="floatingInput" placeholder="Name">
+            <label for="floatingInput">UserName</label>
+        </div>
+
+
+        <div class="form-floating mb-3">
+            <input type="text" asp-for="CustEmail" class="form-control" id="floatingInput" placeholder="Email">
+            <label for="floatingInput">Email</label>
+        </div>
+
+        
+        <div class="form-floating mb-3">
+            <input type="password" asp-for="CustPassword" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        
+        <div class="form-floating mb-3">
+            <input type="text" asp-for="CustPhone" class="form-control" id="floatingInput" placeholder="Phone">
+            <label for="floatingInput">Phone</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="submit" class="btn btn-success" value="Signup">   
+        </div>
+        <div class="form-floating mb-2">
+            <a asp-action="CSignin" asp-controller="" class="text-danger">Already Have Account</a>
+       </div>
+    </form>
+</div>

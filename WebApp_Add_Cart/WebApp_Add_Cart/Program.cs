@@ -4,7 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 var provider = builder.Services.BuildServiceProvider();
 var service = provider.GetRequiredService<IConfiguration>();
 builder.Services.AddDbContext<AddCart_DBContext>(item => item.UseSqlServer(service.GetConnectionString("myconnection")));
@@ -32,7 +32,7 @@ app.UseStaticFiles();
 
 app.UseSession();
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

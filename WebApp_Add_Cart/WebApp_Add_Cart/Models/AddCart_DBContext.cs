@@ -17,14 +17,15 @@ namespace WebApp_Add_Cart.Models
         }
 
         public virtual DbSet<Category> Categories { get; set; } = null!;
+        public virtual DbSet<Customer> Customers { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-
-             
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseSqlServer("data source=.;initial catalog=AddCart_DB;user id=sa;password=aptech;");
             }
         }
 
@@ -42,6 +43,35 @@ namespace WebApp_Add_Cart.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("catname");
+            });
+
+            modelBuilder.Entity<Customer>(entity =>
+            {
+                entity.HasKey(e => e.CustId);
+
+                entity.ToTable("Customer");
+
+                entity.Property(e => e.CustId).HasColumnName("cust_id");
+
+                entity.Property(e => e.CustEmail)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("cust_email");
+
+                entity.Property(e => e.CustName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("cust_name");
+
+                entity.Property(e => e.CustPassword)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("cust_password");
+
+                entity.Property(e => e.CustPhone)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("cust_phone");
             });
 
             modelBuilder.Entity<Product>(entity =>
