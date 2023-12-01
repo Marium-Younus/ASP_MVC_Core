@@ -1,5 +1,4 @@
 ﻿
-<form asp-controller ="Home" asp-action="CSignup">
     @{var total = 0;}
     <div class="row">
         <div class="col-md-9">
@@ -15,11 +14,9 @@
             <th>Remove</th>
         </tr>
     </thead>
-    <tbody>
-       
+    <tbody>      
      @foreach (var item in ViewBag.c)
-    {
-       
+    {    
         <tr class="text-center">
        @*  <td>@item.Id</td> *@
          @foreach (var itempro in ViewBag.pro)
@@ -38,7 +35,7 @@
                             </div>
                         </td>
 
-                                    <td class="invert">$ @amount.ToString("#,##0.00")</td>
+                        <td class="invert">$ @amount.ToString("#,##0.00")</td>
                         total += Convert.ToInt32(amount);
                        
                         <td><a class="text-danger" asp-action="RemoveFromCart" asp-controller="Home" asp-route-productId="@itempro.Proid">Remove</a></td>
@@ -75,11 +72,14 @@
                     <br /><hr />
                     <div class="float-end">GrandTotal $ @grandtotal.ToString("#,##0.00")</div>
                     <br /><hr />
+
+                <form asp-controller="Home" asp-action="CustomerInfo">
                     <div class="d-block float-end">
+                        <input type="hidden" value="@grandtotal.ToString("#,##0.00")" name="gttotal" />
                         <input type="submit" value="Checkout" class="btn  btn-success" />
-                 </div>
+                    </div>
+                </form>
                 </div>
             </div>
     </div>
     </div>
-</form>

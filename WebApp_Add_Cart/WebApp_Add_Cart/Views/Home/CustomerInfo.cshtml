@@ -1,0 +1,32 @@
+﻿@inject Microsoft.AspNetCore.Http.IHttpContextAccessor accessor
+@model WebApp_Add_Cart.Models.OrderTable
+<h1>  @ViewBag.sessionname</h1>
+
+
+<form asp-action="CustomerInfo" asp-controller="Home">
+<div class="form-floating mb-3">
+    <input type="text" class="form-control" placeholder="FullName" asp-for="Fullname">
+    <label for="floatingInput">FullName</label>
+</div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="Phone" asp-for="Phone">
+    <label for="floatingPassword">Phone</label>
+</div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" placeholder="Address" asp-for="Address">
+    <label for="floatingPassword">Address</label>
+</div>
+
+
+    <div class="form-floating mb-3">
+        <input asp-for="TotalAmount" type="text" value="@accessor.HttpContext.Session.GetString("total_session") $" class="form-control" placeholder="Total">
+    <label for="floatingPassword">Total</label>
+</div>
+
+
+    <div class="form-floating mb-3 d-grid">
+        <input name="btn" type="submit" class="btn btn-primary" value="Place Order">
+    
+</div>
+</form>

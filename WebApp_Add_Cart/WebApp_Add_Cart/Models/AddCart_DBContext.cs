@@ -18,6 +18,7 @@ namespace WebApp_Add_Cart.Models
 
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Customer> Customers { get; set; } = null!;
+        public virtual DbSet<OrderTable> OrderTables { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -72,6 +73,45 @@ namespace WebApp_Add_Cart.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("cust_phone");
+            });
+
+            modelBuilder.Entity<OrderTable>(entity =>
+            {
+                entity.HasKey(e => e.OrderId)
+                    .HasName("PK_Order");
+
+                entity.ToTable("OrderTable");
+
+                entity.Property(e => e.OrderId).HasColumnName("Order_id");
+
+                entity.Property(e => e.Address)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Fullname)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.OrderDate)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Order_Date");
+
+                entity.Property(e => e.PIdFk).HasColumnName("P_id_fk");
+
+                entity.Property(e => e.Phone)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.TotalAmount)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("Total_Amount");
+
+                entity.HasOne(d => d.PIdFkNavigation)
+                    .WithMany(p => p.OrderTables)
+                    .HasForeignKey(d => d.PIdFk)
+                    .HasConstraintName("FK_OrderTable_Product");
             });
 
             modelBuilder.Entity<Product>(entity =>

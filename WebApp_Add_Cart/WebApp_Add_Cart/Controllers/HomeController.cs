@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Online_Shpping_Cart.Models;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using System.Xml.Schema;
 using WebApp_Add_Cart.Models;
 
 namespace WebApp_Add_Cart.Controllers
@@ -128,7 +129,7 @@ namespace WebApp_Add_Cart.Controllers
                 {
                     string Username = item.CustName;
                     HttpContext.Session.SetString("name_session", Username);
-                    return RedirectToAction("CustomerDetail");
+                    return RedirectToAction("CustomerInfo");
                 }
                 else
                 {
@@ -141,10 +142,57 @@ namespace WebApp_Add_Cart.Controllers
 
         }
 
-        public IActionResult CustomerDetail()
+        public IActionResult CustomerInfo()
         {
             HttpContext.Session.GetString("name_session");
+          
+            if (HttpContext.Session.GetString("name_session") == null)
+            {
+                return RedirectToAction("CSignin");
+            }
+
             return View();
+        }
+
+       [HttpPost]
+        public IActionResult CustomerInfo(OrderTable od, string gttotal)
+        {
+
+            if (gttotal != null)
+            {
+                HttpContext.Session.SetString("total_session", gttotal);
+            }
+             var pro = from prod in ok.c
+                          join ord in database.Products on prod.Id equals ord.Proid
+                          select new
+                          {
+                              pid = ord.Proid,
+                              pp = ord.Proprice,
+                              pq = prod.Quantity
+                          };
+            if (Request.Form["btn"] != default(Nullable))
+            {
+
+
+
+                OrderTable obj = new OrderTable();
+                obj.Fullname = od.Fullname;
+                obj.Phone = od.Phone;
+                obj.Address = od.Address;
+                obj.OrderDate = DateTime.Now.ToString();
+                obj.TotalAmount = od.TotalAmount;
+                foreach (var item in pro)
+                {
+                    obj.PIdFk = item.pid;
+                    obj.Quantity = item.pq;
+                }
+                database.Entry(obj).State = EntityState.Added;
+                database.SaveChanges();
+            }
+
+            return RedirectToAction("Csignin");
+
+
         }
 
         //-----------------------------
